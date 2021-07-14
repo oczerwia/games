@@ -10,6 +10,7 @@ The class TikTakToe represents one game. The class has several methods to work. 
 a status which works as a flag, move_command which stores the current move made and winner which stores the winner of the game.
 
 Apart from dundermethods there is:
+  - __init__() decides randomly on initializsation which player beginns
   - check_input() : This cleans user input and controlls if the input is valid
   - next_move(): This funktion sets the next move and changes the field. If the position is already taken it warns the user
   - get_status(): This checks if one player achieved 3 in a row and changes a class variable
