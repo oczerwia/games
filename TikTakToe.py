@@ -1,5 +1,3 @@
-#class oriented tik tak toe
-
 import random
 
 class TikTakToe:
