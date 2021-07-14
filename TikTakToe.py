@@ -133,7 +133,9 @@ class TikTakToe:
             
             
     def run_game(self):
+        print("")
         print(self)
+        print("The game starts now!")
         while self.status == -1:
             self.get_move()
             self.make_move()
@@ -146,20 +148,23 @@ def main():
     inputs = True
     while game_runs:
         bot = input("Do you want to play against a bot?([y/n])")
-        if bot == "n":
-            while inputs:
-                player_one = input("Please input your name Player One (X)...:")
-                player_two = input("Please input your name Player Two (O)...:")
-                inputs = False
+        if((bot != "y" ) & (bot != "n")):
+            print("please enter a valid anwser!")
         else:
-            while inputs:
-                player_one = input("Please input your name Player...:")
-                player_two = "Bot"
-                inputs = False
+            if bot == "n":
+                while inputs:
+                    player_one = input("Please input your name Player One (X)...:")
+                    player_two = input("Please input your name Player Two (O)...:")
+                    inputs = False
+            else:
+                while inputs:
+                    player_one = input("Please input your name Player...:")
+                    player_two = "Bot"
+                    inputs = False
                 
-        new_game = TikTakToe(player_one, player_two)
-        new_game.run_game()   
-        game_runs = False
+            new_game = TikTakToe(player_one, player_two)
+            new_game.run_game()   
+            game_runs = False
         
 main()
     
